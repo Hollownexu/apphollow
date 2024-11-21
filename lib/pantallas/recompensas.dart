@@ -143,53 +143,54 @@ class Recompensas extends StatelessWidget {
               ),
             ),
           ),
-          Container(
-            height: 434, // Ajusta la altura según tus necesidades
-            child: GridView.builder(
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2, // Número de columnas
-                crossAxisSpacing: 8, // Espacio horizontal entre elementos
-                mainAxisSpacing: 8, // Espacio vertical entre elementos
-                childAspectRatio:
-                    0.8, // Relación de aspecto para el tamaño de los elementos
-              ),
-              itemCount: elementosCarrusel.length,
-              itemBuilder: (context, index) {
-                final elemento = elementosCarrusel[index];
-                return GestureDetector(
-                  child: Container(
-                    margin: EdgeInsets.symmetric(horizontal: 8, vertical: 8),
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage(elemento['imagen']!),
-                        fit: BoxFit.cover,
+          Expanded(
+            child: Container(
+              child: GridView.builder(
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  crossAxisSpacing: 8,
+                  mainAxisSpacing: 8,
+                  childAspectRatio:
+                      0.8,
+                ),
+                itemCount: elementosCarrusel.length,
+                itemBuilder: (context, index) {
+                  final elemento = elementosCarrusel[index];
+                  return GestureDetector(
+                    child: Container(
+                      margin: EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage(elemento['imagen']!),
+                          fit: BoxFit.cover,
+                        ),
+                        borderRadius: BorderRadius.circular(16),
                       ),
-                      borderRadius: BorderRadius.circular(16),
-                    ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        Container(
-                          width: double.infinity,
-                          padding: EdgeInsets.all(8),
-                          decoration: BoxDecoration(
-                            color: Colors.black.withOpacity(0.5),
-                            borderRadius: BorderRadius.only(
-                              bottomLeft: Radius.circular(16),
-                              bottomRight: Radius.circular(16),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          Container(
+                            width: double.infinity,
+                            padding: EdgeInsets.all(8),
+                            decoration: BoxDecoration(
+                              color: Colors.black.withOpacity(0.5),
+                              borderRadius: BorderRadius.only(
+                                bottomLeft: Radius.circular(16),
+                                bottomRight: Radius.circular(16),
+                              ),
+                            ),
+                            child: Text(
+                              elemento['texto']!,
+                              style: TextStyle(color: Colors.white),
+                              textAlign: TextAlign.center,
                             ),
                           ),
-                          child: Text(
-                            elemento['texto']!,
-                            style: TextStyle(color: Colors.white),
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
-                  ),
-                );
-              },
+                  );
+                },
+              ),
             ),
           ),
         ],

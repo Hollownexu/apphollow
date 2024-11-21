@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/pantallas/jefe1.dart';
 import 'package:myapp/pantallas/recompensas.dart';
 import 'package:myapp/pantallas/consejos.dart';
 import 'package:myapp/pantallas/user.dart';
 import 'package:myapp/pantallas/mensajes.dart';
+import 'package:myapp/pantallas/jefe1.dart';
 import 'package:myapp/pantallas/jefe2.dart';
 import 'package:myapp/pantallas/jefe3.dart';
 import 'package:myapp/pantallas/jefe4.dart';

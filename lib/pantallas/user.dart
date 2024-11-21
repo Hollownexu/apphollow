@@ -62,7 +62,6 @@ class User extends StatelessWidget {
       ),
       body: Stack(
         children: [
-          // Imagen de fondo
           Image(
             image: const AssetImage("images/fdo.png"),
             height: MediaQuery.of(context).size.height,
@@ -73,21 +72,19 @@ class User extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                // Imagen de usuario redonda
                 Container(
                   width: 150,
                   height: 150,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     image: DecorationImage(
-                      image: AssetImage('images/user_placeholder.jpg'), // Imagen provisional
+                      image: AssetImage('images/user_placeholder.jpg'),
                       fit: BoxFit.cover,
                     ),
                   ),
                 ),
                 SizedBox(height: 16),
 
-                // Título de nombre de usuario
                 Text(
                   "Nombre de Usuario",
                   style: TextStyle(
@@ -99,7 +96,6 @@ class User extends StatelessWidget {
                 ),
                 SizedBox(height: 8),
 
-                // Texto de rango
                 Text(
                   "Rango: Caballero",
                   style: TextStyle(
@@ -109,7 +105,6 @@ class User extends StatelessWidget {
                 ),
                 SizedBox(height: 16),
 
-                // Botón debajo del rango
                 Boton(
                   titulo: "MENSAJES",
                   padding: EdgeInsets.all(16),
@@ -133,7 +128,7 @@ class User extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.purple,
-        onPressed: () {
+                  onPressed: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(

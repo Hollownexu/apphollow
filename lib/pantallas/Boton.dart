@@ -25,15 +25,15 @@ class Boton extends StatelessWidget {
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [
-              Color(0xFF9D62F5), // Color inicial del degradado (ajústalo según tu diseño)
-              Color(0xFF6049CD), // Color final del degradado
+              Color(0xFF9D62F5),
+              Color(0xFF6049CD),
             ],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
           ),
-          borderRadius: BorderRadius.circular(16), // Ajuste opcional para bordes redondeados
+          borderRadius: BorderRadius.circular(16),
         ),
-        child: Center( // Centra el texto dentro del botón
+        child: Center(
           child: Text(
             titulo,
             style: TextStyle(color: textColor),

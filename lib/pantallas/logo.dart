@@ -8,38 +8,17 @@ class Logo extends StatefulWidget {
   _LogoState createState() => _LogoState();
 }
 
-class _LogoState extends State<Logo> with SingleTickerProviderStateMixin {
-  late AnimationController _controller;
-  late Animation<double> _animation;
-
+class _LogoState extends State<Logo> {
   @override
   void initState() {
     super.initState();
 
-    // Configura el controlador de animación
-    _controller = AnimationController(
-      duration: const Duration(milliseconds: 500),
-      vsync: this,
-    )..repeat(reverse: true);
-
-    // Define la animación que oscila entre 0.8 y 1.0 para el efecto de "encogerse y agrandarse"
-    _animation = Tween<double>(begin: 0.8, end: 1.0).animate(
-      CurvedAnimation(parent: _controller, curve: Curves.easeInOut),
-    );
-
-    // Redirige a la pantalla de welcome después de 3 segundos
     Future.delayed(const Duration(seconds: 3), () {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => const welcome()),
       );
     });
-  }
-
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
   }
 
   @override
@@ -72,21 +51,12 @@ class _LogoState extends State<Logo> with SingleTickerProviderStateMixin {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    AnimatedBuilder(
-                      animation: _animation,
-                      builder: (context, child) {
-                        return Transform.scale(
-                          scale: _animation.value,
-                          child: child,
-                        );
-                      },
-                      child: const Image(
-                        image: AssetImage("images/hollow.png"),
-                        height: 215,
-                        width: 200,
-                        fit: BoxFit.cover,
-                      ),
+                  children: const [
+                    Image(
+                      image: AssetImage("images/hollow.png"),
+                      height: 215,
+                      width: 200,
+                      fit: BoxFit.cover,
                     ),
                   ],
                 ),

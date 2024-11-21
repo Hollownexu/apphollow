@@ -2,7 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:myapp/widget/Boton.dart';
-import 'package:myapp/pantallas/login.dart'; // Importa las pantallas nuevas
+import 'package:myapp/pantallas/login.dart';
 import 'package:myapp/pantallas/registro.dart';
 
 class welcome extends StatelessWidget {

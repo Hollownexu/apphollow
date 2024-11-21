@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     //return MaterialApp(home: splash());
     //return MaterialApp(home: malditasea());}
-    return MaterialApp(home: Logo());
+    return MaterialApp(debugShowCheckedModeBanner: false, home: Logo());
   }
 }
 

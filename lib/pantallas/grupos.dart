@@ -91,7 +91,6 @@ class Grupos extends StatelessWidget {
       ),
       body: Stack(
         children: [
-          // Imagen de fondo
           Image(
             image: AssetImage("images/fdo.png"),
             height: MediaQuery.of(context).size.height,
@@ -100,7 +99,6 @@ class Grupos extends StatelessWidget {
           ),
           Column(
             children: [
-              // Botones de Mensajes y Grupos
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -162,7 +160,6 @@ class Grupos extends StatelessWidget {
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          // Imagen del usuario
                           ClipRRect(
                             borderRadius: BorderRadius.circular(10),
                             child: Image.asset(
@@ -173,7 +170,6 @@ class Grupos extends StatelessWidget {
                             ),
                           ),
                           SizedBox(width: 10),
-                          // Nombre y mensaje
                           Expanded(
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,

@@ -54,7 +54,7 @@ dev_dependencies:
 # The following section is specific to Flutter packages.
 flutter:
   fonts:
-    - family: trajan  # Nombre que usarás en el código
+    - family: trajan
       fonts:
         - asset: images/trajan_pro.ttf
 
@@ -69,7 +69,6 @@ flutter:
   - images/trajan_pro.ttf
   - images/
   - images/consejos/
-  #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

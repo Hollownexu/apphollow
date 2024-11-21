@@ -10,24 +10,23 @@ class login extends StatefulWidget {
 
 class _LoginState extends State<login> {
   final TextEditingController _passwordController = TextEditingController();
-  bool _isObscure = true; // Variable para controlar la visibilidad de la contraseña
+  bool _isObscure = true;
   @override
   void dispose() {
-    _passwordController.dispose(); // Libera el controlador
+    _passwordController.dispose();
     super.dispose();
   }
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: true,
       backgroundColor: Color(0xff121835),
-      body: SingleChildScrollView( // Envuelve el contenido en un scroll
+      body: SingleChildScrollView( 
       child: SizedBox(
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
         child: Stack(
           alignment: Alignment.topLeft,
           children: [
-            ///***If you have exported images you must have to copy those images in assets/images directory.
             Image(
               image: AssetImage(
                   "images/fdo.png"),
@@ -74,11 +73,11 @@ class _LoginState extends State<login> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: EdgeInsets.symmetric(vertical: 24), // Solo aplica padding en la parte superior e inferior
-                            child: Center( // Centra el texto horizontalmente
+                            padding: EdgeInsets.symmetric(vertical: 24),
+                            child: Center(
                               child: Text(
                                 "Bienvenido a Hollow Nexus",
-                                textAlign: TextAlign.center, // Centra el texto dentro del widget Text
+                                textAlign: TextAlign.center,
                                 overflow: TextOverflow.clip,
                                 style: TextStyle(
                                   fontFamily: 'trajan',
@@ -98,7 +97,7 @@ class _LoginState extends State<login> {
                               mainAxisSize: MainAxisSize.max,
                               children: [
                               Padding(
-                                padding: EdgeInsets.only(top: 20.0), // Aplica padding solo en la parte izquierda
+                                padding: EdgeInsets.only(top: 20.0),
                                 child: Icon(
                                   Icons.mail,
                                   color: Color(0xff7a37c4),
@@ -184,7 +183,7 @@ class _LoginState extends State<login> {
                               mainAxisSize: MainAxisSize.max,
                               children: [
                               Padding(
-                                padding: EdgeInsets.only(top: 26.0), // Aplica padding solo en la parte superior
+                                padding: EdgeInsets.only(top: 26.0),
                                 child: Icon(
                                   Icons.lock,
                                   color: Color(0xff7a38c3),
@@ -270,11 +269,11 @@ class _LoginState extends State<login> {
                                                   contentPadding: EdgeInsets.symmetric(vertical: 8, horizontal: 12),
                                                   suffixIcon: IconButton(
                                                     icon: Icon(
-                                                      _isObscure ? Icons.visibility_off : Icons.visibility, // Alterna el icono
+                                                      _isObscure ? Icons.visibility_off : Icons.visibility,
                                                     ),
                                                     onPressed: () {
                                                       setState(() {
-                                                        _isObscure = !_isObscure; // Cambia el valor de _isObscure
+                                                        _isObscure = !_isObscure;
                                                       });
                                                     },
                                                     color: Color(0xffa005ff),
@@ -313,7 +312,7 @@ class _LoginState extends State<login> {
                                       builder: (context) => Home(),
                                     ),
                                   );
-                                }, // Función vacía
+                                }, 
                               )
                             ),
                           ),
